@@ -1,6 +1,8 @@
 from selenium import webdriver
 import unittest
 import unittestreport
+from BeautifulReport import BeautifulReport
+import unittestreport
 class TestBaidu(unittest.TestCase):
 
     def setUp(self) -> None:
@@ -21,4 +23,15 @@ class TestBaidu(unittest.TestCase):
         self.driver.close()
 
 if __name__ == '__main__':
-    unittest.main()
+    suit = unittest.TestSuite()
+    suit.addTest(TestBaidu('test_01'))
+    suit.addTest(TestBaidu('test_02'))
+
+    #BeautifulReport(suit).report(filename='1',description='测试报告',)
+    unittestreport.TestRunner(suit,filename="report.html",
+                 report_dir=".",
+                 title='测试报告',
+                 tester='qiao',
+                 desc="自动化项目测试生成的报告",
+                 templates=1).run()
+
