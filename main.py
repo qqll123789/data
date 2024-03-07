@@ -9,9 +9,10 @@ class TestBaidu(unittest.TestCase):
     def test_01(self):
         '''执行用例1'''
         self.driver.get('https://www.baidu.com')
+        self.assertEqual(1,2)
         print('001')
 
-    def test_01(self):
+    def test_02(self):
         '''执行用例2'''
         self.driver.get('https://www.baidu.com')
         print('002')
