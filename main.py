@@ -9,13 +9,13 @@ class TestBaidu(unittest.TestCase):
         self.driver = webdriver.Chrome()
 
     def test_01(self):
-        '''执行用例1'''
+        u'''执行用例1'''
         self.driver.get('https://www.baidu.com')
         self.assertEqual(1,2)
         print('001')
 
     def test_02(self):
-        '''执行用例2'''
+        u'''执行用例2'''
         self.driver.get('https://www.baidu.com')
         print('002')
 
@@ -30,8 +30,8 @@ if __name__ == '__main__':
     #BeautifulReport(suit).report(filename='1',description='测试报告',)
     unittestreport.TestRunner(suit,filename="report.html",
                  report_dir=".",
-                 title='测试报告',
+                 title=u'测试报告',
                  tester='qiao',
-                 desc="自动化项目测试生成的报告",
+                 desc=u"自动化项目测试生成的报告",
                  templates=1).run()
 
